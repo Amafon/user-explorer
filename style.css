@@ -1,0 +1,176 @@
+:root {
+  --primary: #047857;
+  --primary-dark: #065f46;
+  --background: #f0f9f4;
+  --text: #1f2937;
+  --border: #d1d5db;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(90%, 1000px);
+  margin-inline: auto;
+}
+
+.header {
+  padding: 2rem 0;
+  background: var(--primary-dark);
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin-bottom: 0;
+}
+
+main {
+  padding-block: 2rem;
+}
+
+.panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+input {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.actions button {
+  background: #374151;
+}
+
+.actions button:hover {
+  background: #111827;
+}
+
+.results {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.results button {
+  margin-top: 1em;
+}
+
+.results p {
+  margin: 0;
+}
+
+.results i {
+  margin-right: 1rem;
+}
+
+.results-container,
+.users-container {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+
+  display: grid;
+  gap: 0.5rem;
+}
+
+.results-container .card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  margin: 0.25rem 0;
+}
+
+.empty {
+  color: #6b7280;
+}
+
+#status:not(:empty) {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.success {
+  color: var(--primary-dark);
+}
+
+@media (max-width: 600px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form button,
+  .search-form input {
+    width: 100%;
+  }
+}

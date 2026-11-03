@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Explorer - Exercices JavaScript</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>User Explorer</h1>
+        <p>Apprendre JavaScript avec une API REST</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>Rechercher un utilisateur</h2>
+
+        <form id="user-form" class="search-form">
+          <input
+            type="number"
+            id="user-id"
+            min="1"
+            placeholder="Identifiant (1 à 10)"
+            required
+          />
+          <button type="submit" id="search-btn">Rechercher</button>
+        </form>
+
+        <div class="actions">
+          <button id="load-all-btn" type="button">
+            Charger plusieurs utilisateurs
+          </button>
+
+          <button id="load-posts-btn" type="button">
+            Charger les publications
+          </button>
+
+          <button id="test-error-btn" type="button">Tester une erreur</button>
+        </div>
+
+        <p id="status" role="status"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Informations utilisateur</h2>
+        <div id="user-results" class="results">
+          <p class="empty">Aucun utilisateur chargé.</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Publications</h2>
+        <div id="posts-results" class="results">
+          <p class="empty">Aucune publication.</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Commentaires</h2>
+        <div id="comments-results" class="results">
+          <p class="empty">Aucun commentaire.</p>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
